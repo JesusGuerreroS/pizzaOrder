@@ -1,0 +1,35 @@
+#############################################
+#script to give you a pizza order
+#############################################
+
+
+print("Welcome to Python Pizza Deliveries!")
+
+#get the characteristics of your pizza order
+size = input("What size pizza do you want? S, M, or L ")
+add_pepperoni = input("Do you want pepperoni? Y or N ")
+extra_cheese = input("Do you want extra cheese? Y or N ")
+
+
+#calculate the bill according to what the client ordered
+bill = 0
+if size == 'S':
+    bill += 15
+
+elif size == 'M':
+    bill += 20
+
+else:
+    bill += 25
+
+if add_pepperoni == 'Y':
+    if size == 'S':
+        bill += 2
+    else: 
+        bill +=3
+
+if extra_cheese == 'Y':
+    bill += 3
+
+#show out the total bill
+print(f"your total order is ${bill}")
